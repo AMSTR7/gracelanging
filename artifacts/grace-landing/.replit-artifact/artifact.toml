@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Grace Landing Page"
+description = "A warm, dark, mobile-first landing page that introduces the Grace Christian app and guides visitors to download it, explore its features, and join a global faith community."
+version = "1.0.0"
+id = "artifacts/grace-landing"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24468
+
+[services.development]
+run = "pnpm --filter @workspace/grace-landing run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/grace-landing", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/grace-landing/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24468"
+BASE_PATH = "/"

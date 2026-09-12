@@ -1,0 +1,17 @@
+{
+  "name": "Grace — Walk Closer With God Every Day",
+  "short_name": "Grace",
+  "description": "Daily Bible verses, free Christian books, courses, quizzes, and a global faith community.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#17102b",
+  "theme_color": "#17102b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
